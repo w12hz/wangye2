@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/index.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="pre-box">
+      <h1>WELCOME</h1>
+      <p>JOIN US!</p>
+      
+    </div>
+    <div class="zhuce">
+      <div class="title-box">
+        <h1>register</h1>
+       </div>
+       <div class="input-box">
+        <input type="text" placeholder="用户名">
+        <input type="text" placeholder="密码">
+        <input type="text" placeholder="确认密码">
+       </div>
+      <div class="btn-box">
+        <button>登录</button>
+        <!-- onclick="mySwitch()" 是一段 HTML 中的事件处理代码，它用于为 HTML 元素添加点击事件。当该元素被点击时，会调用名为 mySwitch 的 JavaScript 函数。 -->
+        <p onclick="mySwitch()">已有账号？去登录</p>
+      </div>
+    </div>
+    <div class="denglu">
+     <div class="title-box">
+      <h1>login</h1>
+     </div>
+     <div class="input-box">
+      <input type="text" placeholder="用户名">
+      <input type="text" placeholder="密码">
+     </div>
+    <div class="btn-box">
+      <button>登录</button>
+      <p onclick="mySwitch()">没有账号？去注册</p>
+    </div>
+    </div>
+  </div>
+  <script>
+    /*1
+    let flag=true
+    const mySwitch=()=>{
+      if(flag){
+        $(".pre-box").css("transform","translateX(100%)")
+        $(".pre-box").css("background-color","#e7d2da")
+       
+        
+      }
+      else{
+        $(".pre-box").css("transform","translateX(0%)")
+        $(".pre-box").css("background-color","#c9d4df")
+      }
+      flag=!flag
+    }*/
+
+    let flag = true;
+        const mySwitch = () => {
+            const preBox = document.querySelector('.pre-box');
+            if (flag) {
+                preBox.style.transform = 'translateX(100%)';
+                preBox.style.backgroundColor = '#dcd2dc';
+            } else {
+                preBox.style.transform = 'translateX(0%)';
+                preBox.style.backgroundColor = '#c9d4df';
+            }
+            flag = !flag;
+        };
+        //3
+        /*
+        const preBox = document.querySelector('.pre-box');
+        console.log(preBox);
+        
+        const bbp=document.querySelectorAll('.btn-box p')
+        bbp[0].addEventListener('click',function(){
+          preBox.style.transform='translateX(100%)'
+          preBox.style.backgroundColor = '#dcd2dc';
+        })
+        bbp[1].addEventListener('click',function(){
+          preBox.style.transform='translateX(0%)'
+          preBox.style.backgroundColor = '#c9d4df';
+        })*/
+  </script>
+</body>
+</html>
